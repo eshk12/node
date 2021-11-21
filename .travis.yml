@@ -5,4 +5,12 @@ services:
 script: 
   - docker build -t 206227035/node .
   - docker images 206227035/node
-  
+
+before_deploty:
+  - docker login -u 206227035 -p Eb6ghyl2h9g!
+
+deploy: 
+  provider: script
+  script: docker push 206227035/node
+  on: 
+    branch: master
