@@ -1,0 +1,8 @@
+sudo: required
+services:
+  - dock
+
+script: 
+  - docker build -t 206227035/node .
+  - docker images 206227035/node
+  
